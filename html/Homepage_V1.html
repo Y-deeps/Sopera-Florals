@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Sopera Florals. Fresh flowers, pooja items, and gifts delivered with love.">
+  <meta name="keywords" content="homepage, sopera florals, flowers, pooja items, gifts">
+  <meta name="author" content="Sopera Florals">
+
+  <title>Homepage V1 - Sopera Florals</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../images/flowers-banner.jpg" type="image/png">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Include navbar -->
+  <div id="navbar"></div>
+
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to PetalBloom</h1>
+      <p>Where every flower tells a story.</p>
+      <a href="../html/product.html" class="cta-btn">Shop Now</a>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="feature-box">
+      <h3>Fresh Picks</h3>
+      <p>Handpicked daily from trusted growers.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Same-Day Delivery</h3>
+      <p>Fast and reliable flower delivery at your doorstep.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Eco-Friendly</h3>
+      <p>We use recyclable and sustainable packaging.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PetalBloom. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Load navbar from external file
+    fetch('Navbar_Homepage.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+  </script>
+</body>
+</html>

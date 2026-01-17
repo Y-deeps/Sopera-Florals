@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for shopping with Sopera Florals! Your order of fresh flowers, pooja items, and gifts is on the way.">
+  <meta name="keywords" content="thank you, order placed, sopera florals, flowers, gifts, pooja items">
+  <meta name="author" content="Sopera Florals">
+
+  <title>Thank You - Sopera Florals</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../images/flowers-banner.jpg" type="image/png">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="thankyou-container">
+    <h1>Thank You for Your Purchase! 🌷</h1>
+    <p>Your flowers are on their way. We hope they brighten your day!</p>
+
+    <h2>We'd love your feedback!</h2>
+    <form id="review-form">
+      <label for="review">Leave a review:</label><br />
+      <textarea id="review" rows="4" placeholder="Write something sweet..."></textarea><br />
+
+      <label>Your rating:</label>
+      <div class="emoji-rating" id="emoji-rating">
+        <span data-value="1">😡</span>
+        <span data-value="2">😐</span>
+        <span data-value="3">🙂</span>
+        <span data-value="4">😍</span>
+        <span data-value="5">🌸</span>
+      </div>
+
+      <input type="hidden" id="rating" value="0">
+      <button type="submit" class="btn">Submit Review</button>
+    </form>
+
+    <div id="review-msg" class="thanks-msg"></div>
+    <a href="testimonials.html" class="btn secondary">View Testimonials</a>
+    <a href="index.html" class="btn">Back to Home</a>
+  </div>
+
+  <script>
+    const emojis = document.querySelectorAll('#emoji-rating span');
+    const ratingInput = document.getElementById('rating');
+
+    // Emoji selection logic
+    emojis.forEach((emoji, index) => {
+      emoji.addEventListener('click', () => {
+        ratingInput.value = emoji.dataset.value;
+        emojis.forEach((e, i) => {
+          e.classList.toggle('selected', i <= index);
+        });
+      });
+    });
+
+    // Store review in localStorage
+    document.getElementById('review-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const reviewText = document.getElementById('review').value.trim();
+      const rating = ratingInput.value;
+
+      if (rating == 0 || reviewText === '') {
+        alert("Please provide both a review and rating.");
+        return;
+      }
+
+      const stored = JSON.parse(localStorage.getItem('reviews') || '[]');
+      stored.push({ review: reviewText, rating });
+      localStorage.setItem('reviews', JSON.stringify(stored));
+
+      document.getElementById('review-msg').textContent = "Thank you for your feedback! 💖";
+      document.getElementById('review').value = '';
+      ratingInput.value = 0;
+      emojis.forEach(e => e.classList.remove('selected'));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Top Picks - Sopera Florals - Best Indian flowers and pooja items">
+    <meta name="keywords" content="Sopera Florals, top picks, best sellers, Indian flowers">
+    <meta name="author" content="Sopera Florals">
+    
+    <title>Top Picks - Sopera Florals</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-spa"></i> Sopera Florals
+            </a>
+
+            <!-- Hamburger menu for mobile -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="product.html">Shop <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="product.html?category=marigold">Marigold</a></li>
+                        <li><a href="product.html?category=jasmine">Jasmine</a></li>
+                        <li><a href="product.html?category=roses">Roses</a></li>
+                        <li><a href="product.html?category=pooja">Pooja Items</a></li>
+                        <li><a href="product.html?category=household">Household</a></li>
+                    </ul>
+                </li>
+                <li><a href="top_picks.html" class="active">Top Picks</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i> Cart 
+                    <span class="cart-count" id="cart-count">0</span>
+                </a></li>
+                <li><a href="signin.html" class="signin-btn">
+                    <i class="fas fa-user"></i> Sign In
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Top Picks Header -->
+    <section class="shop-header">
+        <div class="container">
+            <h1 data-aos="fade-up">Top Picks</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Our most popular and loved products</p>
+        </div>
+    </section>
+
+    <!-- Top Picks Section -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="products-grid" id="top-picks-products">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sopera Florals</h3>
+                    <p>Your trusted partner for traditional Indian flowers and pooja items.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="product.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                        <li><a href="care.html">Flower Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@soperaflorals.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mumbai, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sopera Florals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="../javascript/main.js"></script>
+    
+    <script>
+        // Top Picks Products Data
+        const topPicksProducts = [
+            {
+                id: 1,
+                name: "Fresh Marigold Garland",
+                price: 299.00,
+                image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+                category: "marigold",
+                badge: "Popular",
+                description: "Traditional yellow marigold garland for pooja and festivals",
+                rating: 4.8,
+                reviews: 127
+            },
+            {
+                id: 2,
+                name: "Jasmine String",
+                price: 199.00,
+                image: "https://images.unsplash.com/photo-1560837926-4b3c9c4b5f3e?w=400",
+                category: "jasmine",
+                badge: "Fresh",
+                description: "Pure jasmine strings for daily worship and decoration",
+                rating: 4.9,
+                reviews: 89
+            },
+            {
+                id: 3,
+                name: "Pooja Thali Set",
+                price: 899.00,
+                image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+                category: "pooja",
+                badge: "Complete Set",
+                description: "Complete pooja thali with all essential items",
+                rating: 4.7,
+                reviews: 156
+            },
+            {
+                id: 4,
+                name: "Lotus Flowers",
+                price: 649.00,
+                image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+                category: "general",
+                badge: "Sacred",
+                description: "Fresh lotus flowers for spiritual ceremonies",
+                rating: 4.9,
+                reviews: 167
+            }
+        ];
+
+        // Load Top Picks Products
+        function loadTopPicks() {
+            const container = document.getElementById('top-picks-products');
+            
+            topPicksProducts.forEach(product => {
+                const productCard = `
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="${topPicksProducts.indexOf(product) * 100}">
+                        <div class="product-image">
+                            <img src="${product.image}" alt="${product.name}" loading="lazy">
+                            ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">${product.name}</h3>
+                            <p class="product-description">${product.description}</p>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    ${generateStars(product.rating)}
+                                    <span>(${product.reviews})</span>
+                                </div>
+                                <div class="product-price">₹${product.price.toFixed(2)}</div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary add-to-cart" data-product='${JSON.stringify(product)}'>
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-outline wishlist-btn" data-product='${JSON.stringify(product)}'>
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += productCard;
+            });
+        }
+
+        // Generate Star Rating
+        function generateStars(rating) {
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 !== 0;
+            let stars = '';
+            
+            for (let i = 0; i < fullStars; i++) {
+                stars += '<i class="fas fa-star"></i>';
+            }
+            if (hasHalfStar) {
+                stars += '<i class="fas fa-star-half-alt"></i>';
+            }
+            for (let i = fullStars + (hasHalfStar ? 1 : 0); i < 5; i++) {
+                stars += '<i class="far fa-star"></i>';
+            }
+            
+            return stars;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadTopPicks();
+            
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+        });
+    </script>
+</body>
+</html>

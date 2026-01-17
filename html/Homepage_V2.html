@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the upgraded homepage of Sopera Florals. Explore flowers, pooja essentials, and gifts.">
+  <meta name="keywords" content="homepage v2, sopera florals, flowers, pooja items, gifts">
+  <meta name="author" content="Sopera Florals">
+  <title>Homepage V2 - Sopera Florals</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="../images/flowers-banner.jpg" type="image/png">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Reusable Navbar -->
+  <div id="navbar"></div>
+
+  <section class="hero">
+    <div class="overlay">
+      <div class="hero-text">
+        <h1>Welcome to PetalBloom</h1>
+        <p>Discover timeless floral elegance</p>
+        <a href="../html/product.html" class="cta">Explore Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlight">
+    <h2>Why PetalBloom?</h2>
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <img src="images/fresh.png" alt="Freshness" />
+        <h3>Fresh Blooms</h3>
+        <p>Delivered directly from the fields, every bouquet is a promise of quality.</p>
+      </div>
+      <div class="highlight-card">
+        <img src="images/delivery.png" alt="Delivery" />
+        <h3>Express Delivery</h3>
+        <p>Surprise your loved ones in hours with our lightning-fast delivery service.</p>
+      </div>
+      <div class="highlight-card">
+        <img src="images/sustain.png" alt="Eco-Friendly" />
+        <h3>Sustainable Love</h3>
+        <p>We bloom responsibly using biodegradable materials and local suppliers.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PetalBloom. Handcrafted with love.</p>
+  </footer>
+
+  <script>
+    fetch('Navbar_Homepage.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+  </script>
+</body>
+</html>

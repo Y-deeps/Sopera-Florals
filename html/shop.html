@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - PetalBloom</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navbar (reusable) -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">PetalBloom</a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li class="dropdown">
+          <a href="#">Shop</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Roses</a></li>
+            <li><a href="#">Lilies</a></li>
+            <li><a href="#">Orchids</a></li>
+            <li><a href="#">Bouquets</a></li>
+          </ul>
+        </li>
+        <li><a href="top_picks.html">Top Picks</a></li>
+        <li><a href="cart.html">Cart 🛒<span class="cart-count" id="cart-count">0</span></a></li>
+        <li class="user-menu" id="user-menu">
+          <!-- Dynamic user profile will be inserted here by JavaScript -->
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Products Section -->
+  <section class="products-section" id="products">
+    <div class="card">
+      <img src="../images/rose-bouquet.jpg" alt="Roses Bouquet" loading="lazy">
+      <h3 class="card-title">Roses Bouquet</h3>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="../images/lily-bouquet.jpg" alt="Lilies Bouquet" loading="lazy">
+      <h3 class="card-title">Lilies Bouquet</h3>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="../images/orchid-bouquet.jpg" alt="Orchid Bouquet" loading="lazy">
+      <h3 class="card-title">Orchid Bouquet</h3>
+      <button class="btn add-to-cart">Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-img" src="" alt="">
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc">This bouquet is fresh, hand-picked, and perfect for gifting!</p>
+      <button class="btn add-to-cart" id="modal-add-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- JS Scripts -->
+  <script src="../javascript/main.js"></script>
+  <script>
+    // Initialize user profile on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        createDefaultAdminUser();
+        updateUserProfile();
+    });
+  </script>
+  <script src="../js/shop.js"></script>
+</body>
+</html>

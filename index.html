@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sopera Florals - Premium Indian flowers and household pooja items">
+    <meta name="keywords" content="Indian flowers, pooja items, marigold, jasmine, roses, household, spiritual">
+    <meta name="author" content="Sopera Florals">
+    
+    <title>Sopera Florals - Indian Flowers & Pooja Items</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-spa"></i> Sopera Florals
+            </a>
+
+            <!-- Hamburger menu for mobile -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="html/product.html">Shop <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="html/product.html?category=marigold">Marigold</a></li>
+                        <li><a href="html/product.html?category=jasmine">Jasmine</a></li>
+                        <li><a href="html/product.html?category=roses">Roses</a></li>
+                        <li><a href="html/product.html?category=pooja">Pooja Items</a></li>
+                        <li><a href="html/product.html?category=household">Household</a></li>
+                    </ul>
+                </li>
+                <li><a href="html/top_picks.html">Top Picks</a></li>
+                <li><a href="html/about.html">About</a></li>
+                <li><a href="html/contact.html">Contact</a></li>
+                <li><a href="html/cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i> Cart 
+                    <span class="cart-count" id="cart-count">0</span>
+                </a></li>
+                <li class="user-menu" id="user-menu">
+                    <!-- Dynamic user profile will be inserted here by JavaScript -->
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="hero-title">Traditional Indian Flowers & Pooja Items</h1>
+            <p class="hero-subtitle">Premium quality flowers and spiritual items for your daily prayers and festivals</p>
+            <div class="hero-buttons">
+                <a href="html/product.html" class="btn btn-primary">Shop Now</a>
+                <a href="#featured" class="btn btn-secondary">View Collection</a>
+            </div>
+        </div>
+        <div class="hero-image-overlay"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Free Delivery</h3>
+                    <p>Free same-day delivery on orders over ₹500</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Fresh Guarantee</h3>
+                    <p>100% fresh flowers with 7-day guarantee</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Handcrafted</h3>
+                    <p>Expertly arranged by our floral designers</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Only the finest flowers from trusted growers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Featured Flowers</h2>
+                <p>Our most popular traditional Indian flowers</p>
+            </div>
+            <div class="products-grid" id="featured-products">
+                <!-- Products will be loaded dynamically -->
+            </div>
+            <div class="text-center" data-aos="fade-up">
+                <a href="html/product.html" class="btn btn-outline">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Shop by Category</h2>
+                <p>Find the perfect flowers and pooja items for any occasion</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="category-image" style="background-image: url('https://images.herzindagi.info/image/2021/Feb/puja-flowers-main.jpg');">
+                        <div class="category-content">
+                            <h3>Worshipping</h3>
+                            <p>Daily worship essentials</p>
+                            <a href="html/product.html?category=pooja" class="btn btn-white">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="category-image" style="background-image: url('https://i.pinimg.com/1200x/fc/2d/5b/fc2d5b9f768f3469c26d09f5852ae6cc.jpg');">
+                        <div class="category-content">
+                            <h3>House Decoration</h3>
+                            <p>Traditional home items</p>
+                            <a href="html/product.html?category=household" class="btn btn-white">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="category-image" style="background-image: url('https://in.pinterest.com/pin/90846117479682355/');">
+                        <div class="category-content">
+                            <h3>Festival Flowers</h3>
+                            <p>Seasonal special flowers</p>
+                            <a href="html/product.html?category=marigold" class="btn btn-white">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="category-image" style="background-image: url('https://in.pinterest.com/pin/563018699360904/');">
+                        <div class="category-content">
+                            <h3>Flowers Aesthetic</h3>
+                            <p>Weddings & celebrations</p>
+                            <a href="html/product.html?category=roses" class="btn btn-white">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="category-image" style="background-image: url('https://i.pinimg.com/736x/fa/4d/90/fa4d902fe71fbd091fed1f56994419f2.jpg');">
+                        <div class="category-content">
+                            <h3>Hair Accessories</h3>
+                            <p>Traditional hair adornments</p>
+                            <a href="html/product.html?category=jasmine" class="btn btn-white">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="category-image" style="background-image: url('https://in.pinterest.com/pin/533113674659955770/');">
+                        <div class="category-content">
+                            <h3>General Flowers</h3>
+                            <p>Everyday flower arrangements</p>
+                            <a href="html/product.html?category=general" class="btn btn-white">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from happy customers</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Absolutely beautiful flowers! The arrangement was stunning and delivered on time. My wife loved it!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/60?img=1" alt="Customer">
+                        <div>
+                            <h4>Dheeraj </h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best flower shop in town! Fresh flowers and excellent customer service. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/60?img=2" alt="Customer">
+                        <div>
+                            <h4>Thara Reddy</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The quality exceeded my expectations. The bouquet lasted for over two weeks!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/60?img=3" alt="Customer">
+                        <div>
+                            <h4> Aditya Konathala </h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2>Get 15% Off Your First Order</h2>
+                <p>Subscribe to our newsletter for exclusive offers and floral tips</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sopera Florals</h3>
+                    <p>Your trusted partner for traditional Indian flowers and pooja items.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="html/product.html">Shop</a></li>
+                        <li><a href="html/about.html">About Us</a></li>
+                        <li><a href="html/contact.html">Contact</a></li>
+                        <li><a href="html/faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="html/shipping.html">Shipping Info</a></li>
+                        <li><a href="html/returns.html">Returns</a></li>
+                        <li><a href="html/size-guide.html">Size Guide</a></li>
+                        <li><a href="html/care.html">Flower Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@petalbloom.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Flower Street, NY 10001</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PetalBloom. All rights reserved. | <a href="html/privacy.html">Privacy Policy</a> | <a href="html/terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="javascript/main.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load featured products
+        loadFeaturedProducts();
+    </script>
+</body>
+</html>

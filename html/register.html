@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your Sopera Florals account to shop flowers, pooja items & gifts.">
+    <meta name="keywords" content="signup, register, account, sopera florals, flowers, pooja items, gifts">
+    <meta name="author" content="Sopera Florals">
+    
+    <title>Sign Up - Sopera Florals</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .register-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .register-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .register-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .register-header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .register-body {
+            padding: 40px 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .error-message {
+            color: #dc3545;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .btn-primary {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e0e0e0;
+        }
+        
+        .divider span {
+            background: white;
+            padding: 0 15px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .social-login {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .social-btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .social-btn:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+        
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .login-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        
+        .benefits {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .benefits h3 {
+            color: #333;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        .benefits ul {
+            list-style: none;
+        }
+        
+        .benefits li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .benefits i {
+            color: #28a745;
+            margin-right: 10px;
+            width: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .register-container {
+                margin: 10px;
+                max-width: 100%;
+            }
+            
+            .register-header {
+                padding: 30px 20px;
+            }
+            
+            .register-body {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <h2>Join Sopera Florals</h2>
+            <p>Create your account for exclusive offers and seamless shopping</p>
+        </div>
+        
+        <div class="register-body">
+            <div class="benefits">
+                <h3>Why Join Us?</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Earn reward points on every purchase</li>
+                    <li><i class="fas fa-check"></i> Get exclusive member discounts</li>
+                    <li><i class="fas fa-check"></i> Track your orders easily</li>
+                    <li><i class="fas fa-check"></i> Save your favorite items</li>
+                </ul>
+            </div>
+            
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    <span id="name-error" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <span id="email-error" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your 10-digit phone number" required>
+                    <span id="phone-error" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" placeholder="Create a strong password (min 8 chars)" required>
+                    <span id="password-error" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm">Confirm Password *</label>
+                    <input type="password" id="confirm" name="confirm" placeholder="Re-enter your password" required>
+                    <span id="confirm-error" class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                        <input type="checkbox" id="terms" name="terms" required style="width: auto;">
+                        <span>I agree to the Terms & Conditions and Privacy Policy</span>
+                    </label>
+                    <span id="terms-error" class="error-message"></span>
+                </div>
+                
+                <button type="submit" class="btn-primary">Create Account</button>
+            </form>
+            
+            <div class="divider">
+                <span>OR</span>
+            </div>
+            
+            <div class="social-login">
+                <button class="social-btn" onclick="socialSignup('google')">
+                    <i class="fab fa-google"></i>
+                    Google
+                </button>
+                <button class="social-btn" onclick="socialSignup('facebook')">
+                    <i class="fab fa-facebook-f"></i>
+                    Facebook
+                </button>
+            </div>
+            
+            <div class="login-link">
+                <p>Already have an account? <a href="signin.html">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Form validation
+        function validateEmail(email) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+        
+        function validatePhone(phone) {
+            const phonePattern = /^\d{10}$/;
+            return phonePattern.test(phone);
+        }
+        
+        function validatePassword(password) {
+            return password.length >= 8;
+        }
+        
+        // Registration form
+        document.getElementById('register-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            const confirm = document.getElementById('confirm').value;
+            const terms = document.getElementById('terms').checked;
+            let isValid = true;
+            
+            // Reset errors
+            document.querySelectorAll('.error-message').forEach(error => error.style.display = 'none');
+            
+            // Validate name
+            if (name.length < 3) {
+                document.getElementById('name-error').textContent = 'Name must be at least 3 characters';
+                document.getElementById('name-error').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate email
+            if (!validateEmail(email)) {
+                document.getElementById('email-error').textContent = 'Please enter a valid email address';
+                document.getElementById('email-error').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate phone
+            if (!validatePhone(phone)) {
+                document.getElementById('phone-error').textContent = 'Phone number must be 10 digits';
+                document.getElementById('phone-error').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate password
+            if (!validatePassword(password)) {
+                document.getElementById('password-error').textContent = 'Password must be at least 8 characters';
+                document.getElementById('password-error').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate password match
+            if (password !== confirm) {
+                document.getElementById('confirm-error').textContent = 'Passwords do not match';
+                document.getElementById('confirm-error').style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate terms
+            if (!terms) {
+                document.getElementById('terms-error').textContent = 'You must agree to the terms and conditions';
+                document.getElementById('terms-error').style.display = 'block';
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Store user data
+                const users = JSON.parse(localStorage.getItem('sopera-users') || '[]');
+                
+                // Check if email already exists
+                if (users.find(user => user.email === email)) {
+                    document.getElementById('email-error').textContent = 'An account with this email already exists';
+                    document.getElementById('email-error').style.display = 'block';
+                    return;
+                }
+                
+                users.push({
+                    id: Date.now(),
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    password: password,
+                    createdAt: new Date().toISOString()
+                });
+                localStorage.setItem('sopera-users', JSON.stringify(users));
+                
+                // Auto login
+                localStorage.setItem('sopera-user', JSON.stringify({
+                    email: email,
+                    name: name,
+                    loginTime: new Date().toISOString()
+                }));
+                
+                alert('Account created successfully! Welcome to Sopera Florals!');
+                window.location.href = '../index.html';
+            }
+        });
+        
+        // Social signup
+        function socialSignup(provider) {
+            alert(`${provider} signup would be implemented here. For demo, you can use the form above.`);
+        }
+    </script>
+</body>
+</html>
