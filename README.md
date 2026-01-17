@@ -1,4 +1,4 @@
-# Sopera Florals - Premium Indian Flowers & Pooja Items
+# Sopera Florals - Premium Indian Flowers
 
 A modern, responsive e-commerce website for traditional Indian flowers and household pooja items with complete admin management system.
 
